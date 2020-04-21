@@ -26,7 +26,6 @@ body {
     border: 1px solid #FAFAFA;
     background: #263238;
     border-radius: 5px;
-    box-shadow: 2px 3px 8px #E0E0E0;
 }
 
 h1 {
@@ -66,4 +65,88 @@ h3 {
 .btn:hover {
     background: #1565C0;
     color: white;
+}
+
+@keyframes shake {
+    from,
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translate3d(-5px, 0, 0);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translate3d(5px, 0, 0);
+    }
+  }
+
+  .warning {
+    border: 1px solid #E53935;
+}
+
+.warning-par {
+    color: #E53935;
+    text-align: center;
+    animation-name: shake;
+    animation-duration: 1000ms;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    border-top: 1px solid #FAFAFA;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    text-decoration: none;
+    position: relative;
+    left: 20px;
+    padding: 10px;
+    color: #FAFAFA;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper {
+        min-height: 300px;
+        width: 400px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    form, label, input {
+        padding: 6px 5px;
+        font-size: 16px;
+    }
+    
+    .btn {
+        justify-self: center;
+        padding: 9px 10px;
+        font-size: 16px;
+        border: none;
+        background: white;
+        cursor: pointer;
+        position: relative;
+        right: 15px;
+    }
 }
