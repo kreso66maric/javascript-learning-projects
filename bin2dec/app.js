@@ -8,7 +8,9 @@ let par = document.createElement('p');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const value = document.querySelector('input[type="text"]').value;
+    // Check if value enter is digit
     let isNum = /^\d+$/.test(value);
+    // Check if string contains digit other than one and zero
     let isBinary = /^[01]+$/.test(value);
     if (isNum && isBinary) {
         output.textContent = parseInt(value, 2);
@@ -22,5 +24,3 @@ form.addEventListener('submit', (e) => {
     }
     input.value = '';
 });
-
-// par.remove();

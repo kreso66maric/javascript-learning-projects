@@ -11,8 +11,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* align-content: center; */
-    /* justify-items: center; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #212121;
     color: #FAFAFA;
@@ -94,11 +92,13 @@ h3 {
     }
   }
 
-  .warning {
+.warning {
     border: 1px solid #E53935;
 }
 
 .warning-par {
+    position: relative;
+    right: 28px;
     color: #E53935;
     text-align: center;
     animation-name: shake;
@@ -107,9 +107,6 @@ h3 {
 
 /* Footer */
 .footer {
-    /* position: absolute; */
-    /* bottom: 0; */
-    /* left: 0; */
     margin-top: auto;
     height: 50px;
     border-top: 1px solid #FAFAFA;
@@ -143,6 +140,10 @@ h3 {
     form, label, input {
         padding: 6px 5px;
         font-size: 16px;
+    }
+
+    .warning-par {
+        font-size: 14px;
     }
     
     .btn {
