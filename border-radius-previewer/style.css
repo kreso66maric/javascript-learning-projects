@@ -1,3 +1,10 @@
+:root {
+    --top-left: 0px;
+    --top-right: 0px;
+    --bottom-right: 0px;
+    --bottom-left: 0px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,8 +34,8 @@ body {
 
 .border-maker {
     display: grid;
-    grid-template-columns: 30px 1fr 30px;
-    grid-template-rows: 30px 1fr 30px;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 150px 1fr 150px;
     margin: 50px;
 }
 
@@ -40,6 +47,7 @@ body {
     color: #EFEBE9;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    border-radius: var(--top-left) var(--top-right) var(--bottom-right) var(--bottom-left);
 }
 
 .border-maker .border-corner:nth-child(1) {
@@ -54,6 +62,7 @@ body {
     position: relative;
     left: 5px;
     bottom: 5px;
+    transform: rotate(180deg);
 }
 
 .border-maker .border-corner:nth-child(3) {
@@ -69,7 +78,55 @@ body {
     position: relative;
     left: 5px;
     top: 5px;
+    transform: rotate(180deg);
 }
 
+.output {
+    width :80%;
+    height: 80%;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125rem;
+}
 
+.btn {
+    grid-row: 3 / 4;
+    grid-column: 2/ 3;
+    padding: 10px 30px;
+    align-self: center;
+    justify-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: rgb(13,71,161);
+    color :white;
+    cursor: pointer;
+}
 
+.btn:hover {
+    background: transparent;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    color: rgb(13,71,161);
+    font-size: 20px;
+}

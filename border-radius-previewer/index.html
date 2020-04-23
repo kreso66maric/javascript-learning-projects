@@ -3,25 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Border Maker</title>
+    <title>'border-radius' Maker</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main-wrapper">
-        <h1>Border Maker</h1>
+        <h1>'border-radius' Maker</h1>
 
         <div class="border-maker">
-            <input type="text" class="border-corner" id="corner-1" min="0" value="0">
+            <input type="range" name="radius" min="0" max="50" value="0" class="border-corner" id=corner-1 data-sizing="%">
+            <input type="range" name="radius" min="0" max="50" value="0" class="border-corner" id=corner-2 data-sizing="%">
+            <input type="range" name="radius" min="0" max="50" value="0" class="border-corner" id=corner-3 data-sizing="%">
+            <input type="range" name="radius" min="0" max="50" value="0" class="border-corner" id=corner-4 data-sizing="%">
+            <!-- <input type="text" class="border-corner" id="corner-1" min="0" value="0">
             <input type="text" class="border-corner" id="corner-2" min="0" value="0">
             <input type="text" class="border-corner" id="corner-3" min="0" value="0">
-            <input type="text" class="border-corner" id="corner-4" min="0" value="0">
+            <input type="text" class="border-corner" id="corner-4" min="0" value="0"> -->
             <div class="output-wrapper">
-                <div class="output"></div>
+                <div class="output">
+                    <p class="output-par" id="output-1"></p>
+                    <p class="output-par" id="output-2"></p>
+                    <p class="output-par" id="output-3"></p>
+                </div>
             </div>
+            <button class="btn">Copy</button>
         </div>
     </div>
+
+    <footer class="footer">
+        <a href="https://twitter.com/Kreso66Maric" target="_blank">Twitter</a>
+        <a href="https://github.com/kreso66maric" target="_blank">Github</a>
+    </footer>
 
     <script src="app.js"></script>
 </body>
