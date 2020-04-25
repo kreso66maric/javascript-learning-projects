@@ -20,6 +20,13 @@ body {
     font-family: calc-font;
 }
 
+.logo {
+    height: 80px;
+    width: 80px;
+    background: url('https://www.kresomaric.me/img/logo-black.svg');
+    border: 1px solid #333;
+}
+
 .main {
     width: 100%;
     height: 800px;
@@ -30,25 +37,28 @@ body {
 }
 
 .calculator {
-    width: 500px;
+    width: 450px;
     height: 700px;
     border: 1px solid #333;
     padding: 50px;
     display: grid;
     grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(5, 40px);
+    grid-template-rows: repeat(6, 80px);
+    grid-gap: 3px;
+    /* align-content: flex-end; */
 }
 
 .viewer {
-    grid-column: 2 / -1;
+    grid-column: 1 / -1;
+    border: 1px solid #333;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-family: calc-font;
+    font-size: 2rem;
 }
 
-.clear-all {
-    grid-row: 2 / 3;
-    grid-column: 1/ 2;
-}
-
-.clear {
-    grid-row: 2 / 3;
-    grid-column: 4 / 5;
+div>[data-num="0"] {
+    grid-column: 1 / 3;
 }
