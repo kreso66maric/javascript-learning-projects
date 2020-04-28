@@ -28,7 +28,7 @@ body {
 .main {
     width: 80%;
     height: 90vh;
-    border: 1px solid red;
+    background: #00BCD4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,19 +39,20 @@ body {
 }
 
 .calculator {
-    border: 1px solid #333;
     padding: 30px 20px;
     display: grid;
-    grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(6, 80px);
-    grid-gap: 3px;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(6, 70px);
+    grid-gap: 5px;
     background: #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .5);
 }
 
 .viewer {
     grid-column: 1 / -1;
     border: 1px solid #333;
     padding: 5px;
+    border-radius: 5px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -65,11 +66,17 @@ div>[data-num="0"] {
 }
 
 /* Buttons */
-button {
+.btn {
     border: none;
+    border-radius: 2px;
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, .4);
+}
+
+.btn:active {
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, .4);
 }
 
 .ops {
