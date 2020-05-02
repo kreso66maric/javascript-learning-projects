@@ -1,6 +1,6 @@
 @font-face {
     font-family: calc-font;
-    src: url(calculator-font.ttf);
+    src: url(ScientificCalculatorLcdRegular-Kn7X.ttf);
 }
 
 :root {
@@ -17,7 +17,6 @@
 
 body {
     min-height: 100vh;
-    font-family: calc-font;
     background: #eee;
 }
 
@@ -27,7 +26,7 @@ body {
 }
 
 .main {
-    width: 80%;
+    width: 60%;
     height: 90vh;
     background-image: linear-gradient(to right bottom, #03A9F4, #0D47A1);
     display: flex;
@@ -46,7 +45,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 70px);
     grid-template-rows: repeat(8, 70px);
-    grid-gap: 5px;
+    grid-gap: 10px;
     background: #3E2723;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .5);
 }
@@ -63,14 +62,15 @@ body {
     font-family: calc-font;
     font-size: 2.3rem;
     background: #81C784;
+    color: #004D40;
 }
 
 /* Solar panel */
 .solar-panel {
     display: block;
-    width: 210px;
-    height: 53px;
-    background: #2E7D32;
+    width: 180px;
+    height: 43px;
+    background: rgb(47, 122, 51);
     display: flex;
     border: 2px solid #333;
     grid-column: 1 / -1;
@@ -78,12 +78,12 @@ body {
   }
   
   .box-panel {
-    height: 50px;
+    height: 40px;
     width: 70px;
   }
   
   .box-panel:not(:nth-child(3)) {
-     border-right: 5px solid black;
+     border-right: 5px solid #004D40;
   }
 
 div>[data-num="0"] {
@@ -97,11 +97,12 @@ div>[data-num="0"] {
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 3px 3px 2px rgba(0, 0, 0, .4);
+    box-shadow:0 0 1px 1px #F5F5F5;
+    transition: box-shadow 200ms;
 }
 
 .btn:active {
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, .4);
+    box-shadow: 0 0 0 #F5F5F5;
 }
 
 .ops {
