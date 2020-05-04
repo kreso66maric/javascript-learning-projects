@@ -1,62 +1,94 @@
-const viewer = document.getElementById('viewer');
+const currentValueText = document.querySelector('.current-value');
+const previousValueText = document.querySelector('.previous-value');
 const del = document.getElementById('clear');
 const clearAll = document.getElementById('clear-all');
 const numbers = document.querySelectorAll('#num');
-const ops = document.querySelectorAll('.ops');
+const operations = document.querySelectorAll('.ops');
 const equals = document.getElementById('equals');
 
-let numArray = [];
-let numbersToAdd;
-// Looping over numbers
-numbers.forEach(nums => {
-    // Listening for a click
-    nums.addEventListener('click', (e) => {
-        e.stopPropagation();
-        console.log(`you clicked number ${parseInt(e.target.value)}`);
-        // Storing numbr to the array
-        numArray.push(parseInt(e.target.value));
-        // Displaying the numbers to the screen
-        viewer.textContent = numArray.join('');
-        console.log(numArray.join(''));
+class Calculator {
+    constructor(previousValueText, currentValueText) {
+        this.previousValueText = previousValueText;
+        this.currentValueText = currentValueText;
+        this.clear();
+    };
 
+    clear() {
+        this.currentNumber = '';
+        this.previousNumber = '';
+        this.operation = undefined;
+    };
+
+    delete() {
+
+    };
+
+    appendNumber(number) {
+        if (number === '.' && this.currentNumber.includes('.')) return;
+        this.currentNumber = this.currentNumber.toString() + number.toString();
+    };
+
+    chooseOperation(operation) {
+
+        if (this.currentNumber === '') return;
+
+        if (this.previousNumber !== '') {
+            this.compute();
+        }
+        this.operation = operation;
+        this.previousNumber = this.currentNumber;
+        this.currentNumber = '';
+    };
+
+    compute() {
+         let computation;
+         const prev = parseFloat(this.previousNumber);
+         const current = parseFloat(this.currentNumber);
+         if (isNaN(prev) || isNaN(current)) return;
+         switch (this.operation) {
+            case '+':
+                computation = prev + current;
+                break
+            case '-':
+                computation = prev - current;
+                break
+            case '&#xd7;':
+                computtion = prev * current;
+                break
+            case '&#xf7;':
+                computation = prev / current;
+                break   
+            default:
+                return;          
+        };
+        this.currentNumber = computation;
+        this.operation = undefined;
+        this.previousNumber = '';
+    };
+
+    updateDisplay() {
+        this.currentValueText.innerText = this.currentNumber;
+        this.previousValueText.innerText = this.previousNumber;
+    };
+};
+
+const calculator = new Calculator(previousValueText, currentValueText);
+
+numbers.forEach(number => {
+    number.addEventListener('click', () => {
+        calculator.appendNumber(number.innerText);
+        calculator.updateDisplay();
     });
 });
 
-// Button to clear all numbers from the screen
-clearAll.addEventListener('click', () => {
-    numArray = [];
-    viewer.textContent = 0;
+operations.forEach(operation => {
+    operation.addEventListener('click', () => {
+        calculator.chooseOperation(operation.innerText);
+        calculator.updateDisplay();
+    });
 });
 
-
-// Button to delete last num from the screen
-del.addEventListener('click', () => {
-    numArray.pop();
-    viewer.textContent = numArray.join('');
-    if (numArray.length < 1) {
-        viewer.textContent = 0;
-    }
-    console.log(numArray);
-});
-
-// Logic for operation buttons
-ops.forEach(item => item.addEventListener('click', (e) => {
-    console.log(e.target.dataset.ops);
-    // if plus was clicked, store last numbers
-    if (e.target.dataset.ops === 'plus') {
-        numbersToAdd = numArray.join('');
-        numArray = [];
-        console.log(parseInt(numbersToAdd));
-    }
-    
-
-
-}));
-
-// Logic for equals button
-equals.addEventListener('click', () => {
-   console.log('equals') ;
-   let addedNumbers = parseInt(numbersToAdd) + parseInt(numArray);
-   viewer.textContent = addedNumbers;
-   console.log(addedNumbers);
+equals.addEventListener('click', equal => {
+    calculator.compute();
+    calculator.updateDisplay();
 });
