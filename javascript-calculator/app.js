@@ -20,7 +20,7 @@ class Calculator {
     };
 
     delete() {
-
+        this.currentNumber = this.currentNumber.toString().slice(0, -1);
     };
 
     appendNumber(number) {
@@ -52,10 +52,10 @@ class Calculator {
             case '-':
                 computation = prev - current;
                 break
-            case '&#xd7;':
-                computtion = prev * current;
+            case '×':
+                computation = prev * current;
                 break
-            case '&#xf7;':
+            case '÷':
                 computation = prev / current;
                 break   
             default:
@@ -66,7 +66,13 @@ class Calculator {
         this.previousNumber = '';
     };
 
+
     updateDisplay() {
+        if (this.operation != null) {
+            this.previousValueText.innerText = 
+            `${this.previousNumber} ${this.operation}`;
+        }
+
         this.currentValueText.innerText = this.currentNumber;
         this.previousValueText.innerText = this.previousNumber;
     };
@@ -90,5 +96,15 @@ operations.forEach(operation => {
 
 equals.addEventListener('click', equal => {
     calculator.compute();
+    calculator.updateDisplay();
+});
+
+clearAll.addEventListener('click', clear => {
+    calculator.clear();
+    calculator.updateDisplay();
+});
+
+clear.addEventListener('click', () => {
+    calculator.delete();
     calculator.updateDisplay();
 });
