@@ -7,14 +7,14 @@
 
 body {
   height: 100vh;
-  background: rgba(33,33,33,.8);
+  background: #78909C;
   position: relative;
 }
 
+/* Main content box */
 .main {
   width: 800px;
-  height: 100%;
-  border: 1px solid red;
+  height: 800px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,6 +33,7 @@ body {
   list-style: none;
 }
 
+/* Lights styles */
 .lights-top {
   width: 50px;
   height: 40px;
@@ -58,6 +59,35 @@ body {
   right: 5px;
   width: 8px;
   height: 20px;
-  background: #fff;
+  background: #F5F5F5;
   border-radius: 96% 4% 96% 4% / 90% 4% 96% 10% ;
+  box-shadow: 0 0 2px 3px rgba(255, 255, 255, .3);
+}
+
+/* Switch box */
+
+.switch-box {
+  width: 150px;
+  height: 250px;
+  border: 1px solid aliceblue;
+  position: relative;
+  left: 40px;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.switch {
+  width: 30px;
+  height: 60px;
+  border: 1px solid #333;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  background: #F5F5F5;
+}
+
+.switchOn {
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
 }
