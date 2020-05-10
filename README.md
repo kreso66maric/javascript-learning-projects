@@ -2,10 +2,10 @@
 
 ## 🧑‍💻 Learning adventure
 
-This reposotory contains projects whose aim was to help me practice and learn new JavaScript concepts.
+This repository contains projects whose aim is to help me practice and learn new JavaScript concepts.
 Most of the projects are ideas taken from [this](https://github.com/florinpop17/app-ideas) repository.
 
-Goal for every project is to read user stories and from there build the project on my own and to learn as much as possible during the process.
+The goal for every project is to read user stories and from there build the project on my own and to learn as much as possible during the process.
 
 My goal is to document my process and get better at:
 * Improving my coding skills ⌨️
