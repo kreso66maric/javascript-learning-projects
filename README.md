@@ -20,3 +20,4 @@ Project | Description
 [02-border-radius-previewer](https://codepen.io/kreso66maric/pen/xxwgJed) | Design your border radius and copy CSS code
 [03-javascript-calculator](https://codepen.io/kreso66maric/pen/VwvywXV) | Simple calculator app with all of the basic functionalities
 [04-christmass-lights](https://codepen.io/kreso66maric/pen/wvKyWoN) | Lights that change colors and switch to turn on/off
+[-5-tic-tac-toe](#) | In progress...
