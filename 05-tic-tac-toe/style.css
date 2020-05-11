@@ -1,3 +1,8 @@
+:root {
+    --main-color: #FAFAFA;
+    --black-color: #000;
+}
+
 *,
 *::before,
 *::after {
@@ -6,23 +11,43 @@
     box-sizing: border-box;
 }
 
-body {
+body,
+html {
     height: 100vh;
-    background: rgb(0,0,0);
+    background: #006064;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .main {
+    margin: 0 30px;
     height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column-reverse;
+    justify-content: space-around;
     align-items: center;
-    border: 2px solid white;
+    background: #000;
+}
+
+.board-score {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+p,
+span {
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .x {
     width: 170px;
     height: 170px;
     position: relative;
+    opacity: 0;
+    animation: fadeIn 150ms ease-in;
+    animation-fill-mode: forwards;
 }
 
 .x::before,
@@ -34,7 +59,7 @@ body {
     position: absolute;
     top: 0;
     left: 42%;
-    background: #fff;
+    background: var(--main-color);
 }
 
 .x::before {
@@ -47,8 +72,10 @@ body {
 .o {
     height: 170px;
     width: 170px;
-    border: 25px solid #fff;
+    border: 25px solid var(--main-color);
     border-radius: 50%;
+    animation: fadeIn 150ms ease-in;
+    animation-fill-mode: forwards;
 }
 
 .board {
@@ -59,8 +86,8 @@ body {
 .block {
     height: 250px;
     width: 250px;
-    border: 4px solid #fff;
-    color: white;
+    border: 4px solid var(--main-color);
+    color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,4 +127,15 @@ body {
 #block-8 {
     border-right: none;
     border-bottom: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
