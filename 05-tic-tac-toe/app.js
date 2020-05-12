@@ -101,9 +101,12 @@ function restartGame() {
 
 function endGame(draw) {
     if (draw) {
+        // const modalContent = document.getElementById('modal-content');
+        const h2 = document.getElementsByTagName('h2');
         scores.tie++;
         tie.textContent = scores.tie;
         winnerModal.style.display = 'block';
+        h2[0].textContent = 'It\'s a draw!';
         handleModal();
     } else {
         if (playerTurn) {
