@@ -7,10 +7,26 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
-<body>
-    <!-- <div class="x"></div> -->
-    <!-- <div class="o"></div> -->
+<body id="body">
+    <div class="switch-box" id="switch-box">
+        <i class="fas fa-sun"></i>
+        <div class="switch" id="switch"></div>
+        <i class="fas fa-moon"></i>
+    </div>
+    <div class="winner-modal" id="winner-modal">
+        <div class="modal-content">
+            <h2>Winner is <span id="winner-text"></span></h2>
+            <div class="button-wrapper">
+            <button class="btn" id="play-again">Play Again</button>
+            <button class="btn" id="restart">Restart</button>
+        </div>
+        </div>
+    </div>
+
     <div class="main" id="main">
         <div class="board">
             <div class="block" id="block-0"></div>
@@ -23,10 +39,10 @@
             <div class="block" id="block-7"></div>
             <div class="block" id="block-8"></div>
         </div>
-        <div class="board-score">
-            <p>Player One: <span>0</span></p>
-            <p>Tie: <span>0</span></p>
-            <p>Player Two: <span>0</span></p>
+        <div class="board-score" id="board-score">
+            <p>Player One: <span id="player-one-score">0</span></p>
+            <p>Tie: <span id="tie">0</span></p>
+            <p>Player Two: <span id="player-two-score">0</span></p>
         </div>
     </div>
 

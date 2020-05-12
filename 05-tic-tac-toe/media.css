@@ -1,50 +1,35 @@
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 840px) {
+
+    .main {
+        margin: 0;
+    }
 
     .board-score {
         width: 100%;
     }
 
-    p,
-    span {
-        font-size: 1.8rem;
-    }
-
     .block {
-        height: 220px;
-        width: 220px;
+        height: 200px;
+        width: 200px;
     }
 
-    .x,
-    .o {
-        height: 150px;
-        width: 150px;
-    }
-} 
-
-
-@media screen and (max-width: 800px) {
-    p,
-    span {
-        font-size: 1.4rem;
+    .modal-content h2,
+    .modal-content span {
+        font-size: 2.5rem;
     }
 
-    .block {
-        height: 190px;
-        width: 190px;
+    .btn {
+        padding: 10px 50px;
     }
 
-    .x,
-    .o {
-        width: 120px;
-        height: 120px;
-        border-width: 20px;
+    .switch-box {
+        top: 20px;
     }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 680px) {
 
     .main {
-        margin: 0;
         justify-content: center;
     }
 
@@ -59,14 +44,61 @@
     }
 
     .block {
-        height: 140px;
-        width: 140px;
+        height: 160px;
+        width: 160px;
     }
 
-    .x,
-    .o {
-        height: 90px;
-        width: 90px;
-        border-width: 15px;
+    .modal-content h2,
+    .modal-content span {
+        font-size: 2rem;
+    }
+
+    .button-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .switch-box {
+        top: 200px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    .main {
+        height: 100vh;
+        justify-content: center;
+    }
+
+    .board-score {
+        flex-direction: column;
+        margin: 0 0 40px 40px;
+    }
+    p,
+    span {
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+
+    .block {
+        height: 120px;
+        width: 120px;
+    }
+
+    .x::after,
+    .x::before {
+        width: 15px;
+    }
+
+    .modal-content h2,
+    .modal-content span {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        width: 90%;
     }
 }
