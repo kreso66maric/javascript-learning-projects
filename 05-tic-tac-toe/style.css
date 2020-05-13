@@ -242,15 +242,17 @@ span {
     border-color: var(--black-color);
 }
 
-.o-light::after {
+
+.x-dark::before,
+.x-dark::after {
+    background: var(--black-color) !important;
+}
+
+
+.o-dark::before {
+    background: var(--black-color) !important;
+}
+
+.o-dark::after {
     background: var(--main-color);
-}
-
-.o-light::before {
-    background: var(--black-color);
-}
-
-.x-light::after,
-.x-light::before {
-    background: var(--black-color);
 }

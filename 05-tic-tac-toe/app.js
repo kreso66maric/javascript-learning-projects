@@ -136,8 +136,8 @@ colorModeBtn.addEventListener('click', () => {
     boardScore.classList.toggle('board-score-light');
     blocks.forEach(block => {
         block.classList.toggle('block-light');
-        block.classList.toggle('x-light');
-        block.classList.toggle('o-light');
+        block.classList.toggle('x-dark');
+        block.classList.toggle('o-dark');
     });
 });
 
