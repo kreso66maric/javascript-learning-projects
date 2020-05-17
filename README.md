@@ -21,3 +21,4 @@ Project | Description
 [03-javascript-calculator](https://codepen.io/kreso66maric/pen/VwvywXV) | Simple calculator app with all of the basic functionalities
 [04-christmass-lights](https://codepen.io/kreso66maric/pen/wvKyWoN) | Lights that change colors and switch to turn on/off
 [05-tic-tac-toe](https://codepen.io/kreso66maric/pen/KKdBxzJ) | Tic Tac Toe responsive game with dark and light mode functionality
+[06-music-player](#) | In progress...
