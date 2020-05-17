@@ -1,0 +1,222 @@
+:root {
+    --main-color: #004D40;
+    --white-color: #E0F2F1;
+  }
+  
+  * { 
+  /*   outline: solid 0.25rem hsla(210, 100%, 100%, 0.5); */
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100vh;
+    background: #e5f7ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    height: 500px;
+    width: 700px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #e5f7ea;
+    box-shadow:  5px 5px 8px #b5c3b9, 
+               -5px -5px 8px #ffffff;
+  }
+  
+  .music-player-top {
+    height: 50%;
+    background: url("https://www.transparenttextures.com/patterns/dark-mosaic.png"), linear-gradient(to right bottom, #B2DFDB, #4DB6AC);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+  /* url("https://www.transparenttextures.com/patterns/brick-wall-dark.png") */
+  img {
+    height: 150px;
+    margin: 0 0 50px 30px;
+    border-radius: 3px;
+    border: 10px solid var(--white-color);
+  }
+  
+  .artist-info {
+    position: relative;
+    bottom: 50px;
+    left: 30px;
+    color: var(--main-color);
+  }
+  
+  .artist {
+    font-size: 2.5rem;
+    padding: 5px;
+  }
+  
+  .artist-title {
+    font-size: 1.5rem;
+    margin-left: 5px;
+  }
+  
+  .artist-album {
+    font-size: 1.2rem;
+    padding: 5px;
+    color:  var(--white-color);
+    border-bottom: 1px solid var(--main-color);
+  }
+  
+  .buffer {
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--white-color);
+  }
+  
+  .buffer-slider {
+    width: 80%;
+    height: 10px;
+    background: black;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .buffer-progress {
+      height: 10px;
+      /* width: 50%; */
+      background: var(--main-color);
+      border-radius: 100px;
+      flex: 0;
+      flex-basis: 0;
+      position: relative;
+  }
+
+  .buffer-progress::after {
+    position: absolute;
+    content: "";
+    top: -6px;
+    right: -10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    background: var(--white-color);
+  }
+  
+  .time {
+    font-size: 1.2rem;
+    color: var(--main-color);
+  }
+  
+  .music-player-bottom {
+    height: 40%;
+  }
+  
+  .volume-slider {
+    width: 60%;
+    height: 10px;
+    background: black;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+  }
+
+  .volume-progress {
+      width:50%;
+      height: 10px;
+      background: var(--main-color);
+      border-radius: 100px;
+      flex: 0;
+      flex-basis: 50%;
+      position: relative;
+  }
+
+  .volume-progress::after {
+      position: absolute;
+      content: "";
+      top: -6px;
+      right: -10px;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--main-color);
+      background: var(--white-color);
+  }
+  
+  .controls {
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10%;
+    background: var(--white-color);
+  }
+  
+  .controls-left {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .controls-middle {
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .controls-right {
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  
+  /* Icons */
+  
+  i {
+    cursor: pointer;
+  }
+  
+  .fa-heart {
+    font-size: 2rem;
+    color: var(--main-color);
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+
+  .fa-heart-active {
+    color: #EF5350;
+    animation: pulse 600ms ease;
+  }
+
+  @keyframes pulse {
+      0% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+  }
+  
+  .control-icons-left {
+    font-size: 1.5rem;
+  }
+  
+  .fa-backward,
+  .fa-forward {
+    font-size: 1.7rem;
+  }
+  
+  .fa-play,
+  .fa-pause {
+    text-align: center;
+    font-size: 3rem;
+  }

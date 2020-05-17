@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music-player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="audio" preload="auto" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Derek_Clegg/Solar/Derek_Clegg_-_09_-_Youre_The_Dummy.mp3"></audio>
+    <div class="container">
+    
+        <div class="music-player-top">
+          <i class="fas fa-heart"></i>
+          <img src="https://lh3.googleusercontent.com/sCb-rFVgF8wzVZztNI9t0t_t_DjD3Pt1s4tgqZcXJmaqPFM5R0Lg2pbcvflsTHwALA" alt="Album cover">
+          <div class="artist-info">
+            <p class="artist">Derek Clegg <span class="artist-title">- You're The Dummy</span></p>
+          <p class="artist-album">Album - Solar</p>
+          </div>
+        </div>
+        
+        <div class="buffer">
+            <span class="time time-left">0:00</span>
+          <div class="buffer-slider">
+              <div class="buffer-progress"></div>
+          </div>
+            <span class="time time-duration">0:00</span>
+        </div>
+        
+        <div class="music-player-bottom">
+          <div class="controls">
+            <div class="controls-left">
+              <i class="fas fa-redo control-icons-left"></i>
+              <i class="fas fa-random control-icons-left"></i>
+            </div>
+            <div class="controls-middle">
+              <i class="fas fa-backward"></i>
+            <i class="fas fa-play"></i>
+            <i class="fas fa-forward"></i>
+            </div>
+            <div class="controls-right">
+              <div class="volume-slider">
+                  <div class="volume-progress"></div>
+          </div>
+            <i class="fas fa-volume-up"></i>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
