@@ -30,25 +30,42 @@
   
   .music-player-top {
     height: 50%;
-    background: url("https://www.transparenttextures.com/patterns/dark-mosaic.png"), linear-gradient(to right bottom, #B2DFDB, #4DB6AC);
+    background: url('https://images.unsplash.com/photo-1558411005-ea29ca4bba28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: flex-end;
+    position: relative;
   }
+
+  .music-player-top::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  /* linear-gradient(to right bottom, #B2DFDB, #4DB6AC) */
   /* url("https://www.transparenttextures.com/patterns/brick-wall-dark.png") */
   img {
     height: 150px;
     margin: 0 0 50px 30px;
     border-radius: 3px;
-    border: 10px solid var(--white-color);
+    border: 5px solid var(--white-color);
+    border-radius: 50%;
+    z-index: 200;
   }
   
   .artist-info {
     position: relative;
     bottom: 50px;
     left: 30px;
-    color: var(--main-color);
+    color: var(--white-color);
+    z-index: 200;
   }
   
   .artist {
@@ -65,7 +82,7 @@
     font-size: 1.2rem;
     padding: 5px;
     color:  var(--white-color);
-    border-bottom: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--white-color);
   }
   
   .buffer {
@@ -84,11 +101,11 @@
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
   }
 
   .buffer-progress {
       height: 10px;
-      /* width: 50%; */
       background: var(--main-color);
       border-radius: 100px;
       flex: 0;
@@ -124,6 +141,7 @@
     border-radius: 100px;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   .volume-progress {
@@ -180,16 +198,17 @@
   
   /* Icons */
   
-  i {
+  i:not(:last-child) {
     cursor: pointer;
   }
   
   .fa-heart {
     font-size: 2rem;
-    color: var(--main-color);
+    color: var(--white-color);
     position: absolute;
     right: 15px;
     top: 10px;
+    z-index: 200;
   }
 
   .fa-heart-active {
