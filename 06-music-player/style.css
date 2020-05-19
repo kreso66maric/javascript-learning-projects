@@ -4,7 +4,6 @@
   }
   
   * { 
-  /*   outline: solid 0.25rem hsla(210, 100%, 100%, 0.5); */
     margin: 0;
     padding: 0;
   }
@@ -30,11 +29,10 @@
   
   .music-player-top {
     height: 50%;
-    background: url('https://images.unsplash.com/photo-1558411005-ea29ca4bba28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60');
+    background: url('https://images.unsplash.com/photo-1539319136574-7934afd94566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80');
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    position: relative;
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -49,9 +47,8 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
   }
-  /* linear-gradient(to right bottom, #B2DFDB, #4DB6AC) */
-  /* url("https://www.transparenttextures.com/patterns/brick-wall-dark.png") */
-  img {
+  
+  .album-cover-img {
     height: 150px;
     margin: 0 0 50px 30px;
     border-radius: 3px;
@@ -82,7 +79,6 @@
     font-size: 1.2rem;
     padding: 5px;
     color:  var(--white-color);
-    border-bottom: 1px solid var(--white-color);
   }
   
   .buffer {
@@ -111,6 +107,7 @@
       flex: 0;
       flex-basis: 0;
       position: relative;
+      transition: flex-basis 200ms;
   }
 
   .buffer-progress::after {
@@ -152,6 +149,7 @@
       flex: 0;
       flex-basis: 50%;
       position: relative;
+      transition: flex-basis 200ms;
   }
 
   .volume-progress::after {
@@ -198,10 +196,6 @@
   
   /* Icons */
   
-  i:not(:last-child) {
-    cursor: pointer;
-  }
-  
   .fa-heart {
     font-size: 2rem;
     color: var(--white-color);
@@ -209,6 +203,7 @@
     right: 15px;
     top: 10px;
     z-index: 200;
+    cursor: pointer;
   }
 
   .fa-heart-active {
@@ -229,13 +224,14 @@
     font-size: 1.5rem;
   }
   
-  .fa-backward,
-  .fa-forward {
-    font-size: 1.7rem;
+  .fa-step-backward,
+  .fa-step-forward {
+    font-size: 1.5rem;
   }
   
   .fa-play,
   .fa-pause {
     text-align: center;
     font-size: 3rem;
+    cursor: pointer;
   }
