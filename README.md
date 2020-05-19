@@ -21,4 +21,4 @@ Project | Description
 [03-javascript-calculator](https://codepen.io/kreso66maric/pen/VwvywXV) | Simple calculator app with all of the basic functionalities
 [04-christmass-lights](https://codepen.io/kreso66maric/pen/wvKyWoN) | Lights that change colors and switch to turn on/off
 [05-tic-tac-toe](https://codepen.io/kreso66maric/pen/KKdBxzJ) | Tic Tac Toe responsive game with dark and light mode functionality
-[06-music-player](#) | In progress...
+[06-music-player](https://codepen.io/kreso66maric/pen/YzyJExb) | Music player. Loads only one song and it is possible to scrub track and change volume. Remainding time and time duration is displayed. In the future I want to add more songs and option to skip tracks and shuffle playlist.
